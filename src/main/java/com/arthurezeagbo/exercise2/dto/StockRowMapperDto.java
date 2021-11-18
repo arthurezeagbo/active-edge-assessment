@@ -14,7 +14,7 @@ import java.sql.Timestamp;
 @AllArgsConstructor
 public class StockRowMapperDto {
 
-    private Number id;
+    private Long id;
     private String Name;
     private BigDecimal currentPrice;
     private Timestamp createDate;

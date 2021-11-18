@@ -11,7 +11,7 @@ public class StockRowmapper implements RowMapper<StockRowMapperDto> {
     public StockRowMapperDto mapRow(ResultSet rs, int rowNum) throws SQLException {
         StockRowMapperDto stockRowMapperDto = StockRowMapperDto.builder()
                 .createDate(rs.getTimestamp("create_date"))
-                .id(rs.getObject("id", Number.class))
+                .id(rs.getObject("id", Long.class))
                 .currentPrice(rs.getBigDecimal("current_price"))
                 .lastUpdate(rs.getTimestamp("last_update"))
                 .Name(rs.getString("name"))

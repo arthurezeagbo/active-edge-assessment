@@ -74,7 +74,9 @@ public class StockServiceImpl implements StocksService {
             List<StockRowMapperDto> stockRowMapperDtoList = jdbcTemplate.query(query, new StockRowmapper());
 
                 return new GenericResponse<Object>(null,StatusCodes.SUCCESS,stockRowMapperDtoList);
-        }catch (Exception ex){}
+        }catch (Exception ex){
+            String a = "";
+        }
 
         return new GenericResponse<Object>("No record found",StatusCodes.SUCCESS,null);
 
